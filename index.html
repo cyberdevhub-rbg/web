@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello World Page</title>
+  <title>CyberDevHub - Tech Trends & Tutorials</title>
+  <meta name="description" content="Discover AI, gadgets, software dev, and emerging tech trends">
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>This is my first HTML page.</p>
+  <h1>Latest Tech Articles</h1>
+  <ul>
+  {% for post in site.data.index.posts %}
+    <li>
+      <a href="/posts/{{ post.slug }}.html">{{ post.title }}</a>
+      <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width: 200px;">
+      <p>{{ post.date }}</p>
+    </li>
+  {% endfor %}
+  </ul>
 </body>
 </html>
