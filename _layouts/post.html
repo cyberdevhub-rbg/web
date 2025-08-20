@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.meta }}">
+  <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+</head>
+<body>
+  <h1>{{ page.title }}</h1>
+  <img src="{{ page.image }}" alt="{{ page.title }}">
+  <p>Tags: {{ page.tags | join: ', ' }}</p>
+  <p>Date: {{ page.date }}</p>
+  {{ content }}
+  <a href="/">Back to Home</a>
+</body>
+</html>
