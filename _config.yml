@@ -1,0 +1,14 @@
+title: CyberDevHub
+description: Latest tech news, AI, gadgets, and software tutorials
+baseurl: ""
+url: "https://cyberdevhub.com"
+collections:
+  posts:
+    output: true
+    permalink: /posts/:name
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
